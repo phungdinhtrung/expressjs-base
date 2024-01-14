@@ -5,20 +5,11 @@ const morgan = require('morgan')
 const cors = require('cors')
 const fileUpload = require('express-fileupload');
 
-const pathConfig = require('./config/path')
-global.__base              = __dirname + '/';                                        
-global.__path_config       = __base + pathConfig.folder_config;                      
-global.__path_model        = __base + pathConfig.folder_model;                       
-global.__path_middleware   = __base + pathConfig.folder_middleware;                  
-global.__path_routes       = __base + pathConfig.folder_routes;                      
-global.__path_public       = __base + pathConfig.folder_public;                      
-global.__path_function     = __base + pathConfig.folder_function;                    
-global.__path_database     = __base + pathConfig.folder_database;                    
-global.__path_email        = __base + pathConfig.folder_email;                       
-global.__path_upload       = __base + pathConfig.folder_uploads
-
-// Global function
-global.__function          = require(__path_function + '/global')
+// Global
+global.__base = __dirname; 
+require(__base + '/config/global-path')
+require(__path_function + '/global-function')
+require(__path_config + '/global-config')
 
 const app = express()
 const port = process.env.PORT || 5000;

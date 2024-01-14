@@ -1,11 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { StatusCodes } = require('http-status-codes');
 const { verifyUser } = require(__path_middleware + '/authorize')
-const { createError } = require(__path_middleware + '/error-class-custom')
-const asyncWrapper = require(__path_middleware + '/async-wrapper')
-
-
 
 router.get('/', asyncWrapper((req, res, next) => {
     res.status(StatusCodes.OK)
