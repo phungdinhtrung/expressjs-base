@@ -37,11 +37,7 @@ app.use(fileUpload({
 
 app.use('/', require(__path_routes + '/index'))
 app.all('*', require(__path_middleware + '/not-found'))
-
-app.use((err, req, res, next) => {
-	console.error(err)
-	res.status(500).json(err)
-})
+app.use(require(__path_middleware + '/error-handler'))
 
 app.listen(port, () => {
 	console.log(`Máy chủ đang chạy trên cổng ${port}`)
