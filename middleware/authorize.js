@@ -1,5 +1,4 @@
 require('dotenv').config()
-const { StatusCodes } = require('http-status-codes');
 const jwt = require('jsonwebtoken');
 
 module.exports = {
@@ -16,8 +15,7 @@ module.exports = {
 			} 
 
 	   } catch (error) {
-			next(error)
-			return res.status(StatusCodes.UNAUTHORIZED).json({ success: false, message: 'Error: Unauthorized!' })
+			next(createError(StatusCodes.UNAUTHORIZED, 'Unauthorized!'))
 	   }
     },
 }
