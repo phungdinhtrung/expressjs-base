@@ -1,6 +1,6 @@
-# SERVER
+# EXPRESSJS BASE
 
-## Project setup
+## Setup
 ```
 npm install
 ```
@@ -12,15 +12,5 @@ npm start
 
 ### Compiles and minifies for production
 ```
-pull pfes-server vào thư mục /home/pfes/pfes-server
-npm run build
-pm2 start app.js --name server
-pm2 startup && pm2 save
-
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+pm2 start app.js --name server && pm2 save
 
