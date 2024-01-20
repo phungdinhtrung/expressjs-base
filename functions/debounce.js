@@ -18,3 +18,5 @@ function debounce(func, delay) {
     };
 }
 
+module.exports = debounce;
+

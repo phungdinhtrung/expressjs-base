@@ -30,6 +30,12 @@ app.use('/', require(__path_routes + '/index'))
 app.all('*', require(__path_middleware + '/not-found'))
 app.use(require(__path_middleware + '/error-handler'))
 
+
+const myModule = require('./design-partterns/module-parttern')
+myModule.publicMethod()
+
+
+
 app.listen(port, () => {
 	console.log(`Máy chủ đang chạy trên cổng ${port}`)
 })
