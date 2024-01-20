@@ -13,4 +13,6 @@ const myModule = (() => {
     }
 })();
 
+// myModule.publicMethod()
+
 module.exports = myModule;

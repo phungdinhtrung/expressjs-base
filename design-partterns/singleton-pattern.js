@@ -15,4 +15,8 @@ class ConnectDB {
     }
 }
 
+// const connect1 = new ConnectDB();
+// const connect2 = new ConnectDB();
+// console.log('is duplicate conn ?:=====', connect1 === connect2 ? 'false' : 'true');
+
 module.exports = ConnectDB;
