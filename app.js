@@ -31,9 +31,6 @@ app.all('*', require(__path_middleware + '/not-found'))
 app.use(require(__path_middleware + '/error-handler'))
 
 
-const myModule = require('./design-partterns/module-parttern')
-myModule.publicMethod()
-
 
 
 app.listen(port, () => {
