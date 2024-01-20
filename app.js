@@ -30,6 +30,7 @@ app.use('/', require(__path_routes + '/index'))
 app.all('*', require(__path_middleware + '/not-found'))
 app.use(require(__path_middleware + '/error-handler'))
 
+require('./design-partterns/observer-parttern')
 
 
 
